@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Cedarville+Cursive);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=VT323);
+@import url(https://fonts.googleapis.com/css?family=Chewy);
+
+body {
+  background-color: #9B8F89;
+  text-align: center;
+  color: #7D777B;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#calcDivBox {
+  background-color: #F3EEE7;
+  box-shadow: inset 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  width: 250px;
+  height: 337.5px;
+  border-radius: 100px/20px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: "Cedarville Cursive", Arial, sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+h2 {
+  font-size: 10px;
+  margin-top: -5px;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+#display {
+  background-color: #C7C7B0;
+  width: 210px;
+  height: 32.5px;
+  margin-top: 13px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
+  box-shadow: inset 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
+}
+
+#output {
+  font-size: 30px;
+  color: #ADA9A5;
+  font-family: "VT323";
+  /* vertical alignment */
+  
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: default;
+}
+
+.textAlignedCenter {
+  text-align: center;
+}
+
+.textAlignedRight {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.calcButtonContainer {
+  margin-top: 16.75px;
+  margin-left: 16.25px;
+  overflow-y: auto;
+}
+
+/* selects all buttons in the grid */
+.calcButtonContainer > button {
+  width: 41px;
+  height: 30px;
+  /* floats buttons to the left */
+  
+  float: left;
+  background-color: #34313E;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  color: #F4FFFF;
+  font-size: 15px;
+  font-family: 'Chewy', cursive, sans-serif;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  border-style: solid;
+  border-color: black;
+  border-width: 1.25px;
+  border-radius: 100px/20px;
+  outline: 0;
+}
+
+.redButton {
+  background-color: #B5384A !important;
+}
+
+h1:hover, h2:hover {
+  cursor: default;
+}
