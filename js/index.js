@@ -41,13 +41,12 @@ $(".operator").click(function() {
     calculate();
   }
 
-    // do not calculate if memory of previous number is empty
+  // do not calculate if memory of previous number is empty
   calcMemory.operatorInp = $(this).html();
   
   // operator was pressed between two equal signs
   calcMemory.equalsOk = true;
   calcMemory.newNumber = true;
-
 });
 
 $(".number").click(function() {
@@ -59,18 +58,18 @@ $(".number").click(function() {
     if (calcMemory.currentNumber) {
       calcMemory.previousNumber = $("#output").text();
     }
+    
     clearDisplay();
     setTextAligning();
     display(calcMemory.digitInp);
-
     calcMemory.newNumber = false;
+    
   } else {
     // append entered number on display
     display($("#output").text() + calcMemory.digitInp);
   }
   // update current number
   calcMemory.currentNumber = $("#output").text();
-
 });
 
 $("#allClear").click(function() {
@@ -84,11 +83,9 @@ $("#clearEntry").click(function() {
 });
 
 $("#decimalPoint").click(function() {
-
   if (calcMemory.currentNumber != null) {
     display($("#output").text() + ".");
   }
-
 });
 
 $("#equals").click(function() {
@@ -96,7 +93,6 @@ $("#equals").click(function() {
     calcMemory.equalsOk = false;
     calculate();
   }
-
 });
 
 $("#setSign").click(function() {
@@ -104,13 +100,11 @@ $("#setSign").click(function() {
   if (calcMemory.currentNumber) {
     calcMemory.currentNumber = 0 - calcMemory.currentNumber;
     display(calcMemory.currentNumber);
-
   }
-
 });
 
 function calculate() {
-
+  
   // for chaining mathematical operations
   var tempN = calcMemory.currentNumber;
 
@@ -119,7 +113,7 @@ function calculate() {
     calcMemory.previousNumber = 0;
   }
   
-    if (!calcMemory.currentNumber) {
+  if (!calcMemory.currentNumber) {
     calcMemory.currentNumber = 0;
   }
  
@@ -127,7 +121,6 @@ function calculate() {
   var factor2 = parseFloat(calcMemory.currentNumber, 10);
 
   var equOk = true;
-
 
   switch (calcMemory.operatorInp) {
 
@@ -152,16 +145,13 @@ function calculate() {
   }
 
   if (equOk) {
-
     calcMemory.previousNumber = tempN;
     display(calcMemory.currentNumber);
     calcMemory.newNumber = true;
     calcMemory.operatorInp = null;
-
   } else {
     display("UNDEFINED");
     resetMemory();
     removeTextAligning();
   }
-
 };
